@@ -14,3 +14,12 @@ Nous sommes un groupe de 4 élèves au sein de l'Esaip:
 - BRUN-PICARD Matéo
 - JAFFRE Romain
 - SISSUNG Félix
+
+---
+
+We are a team with 4 students comming fro ESAIP :
+
+- ANQUETIL Eloi
+- BRUN-PICARD Matéo
+- JAFFRE Romain
+- SISSUNG Félix
