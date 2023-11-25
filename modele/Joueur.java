@@ -1,10 +1,18 @@
 package modele;
+
+import java.util.ArrayList;
+
 public class Joueur {
-    private nom: String;
-    private tresor: entier;
-    private cite: Quartier[];
-    private nbQuartiers: entier;
-    private main: ArrayList<Quartier>;
-    private possedeCouronne: boolean;
+    private String nom;
+    private int tresor;
+    private Quartier[] cite;
+    private int nbQuartiers;
+    private ArrayList < Quartier > main;
+    private boolean possedeCouronne;
     
+
+    public Joueur(String nom) {}
+    public Personnage getPersonnage() {}
+    public String getNom() {}
+    public int nbPieces() {}
 }
