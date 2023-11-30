@@ -7,7 +7,7 @@ public abstract class Personnage{
     protected Joueur joueur;
     protected boolean assassine;
     protected boolean vole;
-    protected Plateau plateau;
+    protected PlateauDeJeu plateau;
 
     public Personnage(String nom, int rang, String caracteristiques) { //Constructeur
         this.nom = nom;
