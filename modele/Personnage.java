@@ -17,5 +17,20 @@ public abstract class Personnage{
         assassine = false;
         vole = false;
     }
+    public String getNom(){}
+    public int getRang() {}
+    public String getCaracteristiques() {}
+    public Joueur getJoueur() {}
+    public boolean getAssassine(){}
+    public boolean getVole(){}
+    public void setJoueur(Joueur j) {}
+    public void setVole() {}
+    public void setAssassine() {}
+    public void ajouterPieces() {}
+    public void ajouterQuartier(Quartier nouveau) { }
+    public void construire(Quartier nouveau) {}
+    public void percevoirRessourcesSpecifiques() {}
+    public abstract void utiliserPouvoir();
+    public void reinitialiser() {}
 
 }
