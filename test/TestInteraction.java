@@ -16,7 +16,7 @@ public class TestInteraction {
 		System.out.print("Veuillez rentrer un entier : ");
 		int i = Interaction.lireUnEntier();
 		System.out.println("entier = " + i);
-		System.out.print("Veuillez rentrer un deuxième entier : ");
+		System.out.print("Veuillez rentrer un deuxiÃ©me entier : ");
 		int j = Interaction.lireUnEntier();
 		System.out.println("entier = " + j);
 	}
@@ -35,12 +35,12 @@ public class TestInteraction {
 		System.out.print("Veuillez rentrer \"oui\", \"o\", \"non\" ou \"n\" : ");
 		boolean reponse = Interaction.lireOuiOuNon();
 		Test.test(reponse==true || reponse==false,
-				  "test de saisie d'une réponse oui ou non");
+				  "test de saisie d'une rÃ©ponse oui ou non");
 	}
 	public void test4(){
 		System.out.println("TEST POUR LIRE UNE CHAINE DE CARACTERES");
 		System.out.print("Veuillez rentrer un mot ");
 		String s = Interaction.lireUneChaine();
-		Test.test(s.length()!=0, "test de saisie d'une chaîne de caractères");
+		Test.test(s.length()!=0, "test de saisie d'une chaÃ©ne de caractÃ©res");
 	}
 }
