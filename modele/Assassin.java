@@ -7,5 +7,9 @@ public class Assassin extends  Personnage{
 		super("Assassin", 1, Caracteristiques.ASSASSIN);
 	}
     public void utiliserPouvoir() {}
+    public void utiliserPouvoirAvatar(){}
+    public static void main(String[] args) {
+        
+    }
 
 }
