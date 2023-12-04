@@ -2,7 +2,7 @@ package modele;
 
 import java.util.Random;
 
-import controlleur.Interaction;
+import controleur.Interaction;
 
 public class Condottiere extends Personnage {
 

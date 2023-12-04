@@ -3,7 +3,7 @@ package modele;
 import java.util.ArrayList;
 import java.util.Random;
 
-import controlleur.Interaction;
+import controleur.Interaction;
 
 public class Magicienne extends Personnage {
 

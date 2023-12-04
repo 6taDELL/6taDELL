@@ -1,7 +1,8 @@
 package modele;
 
-import controlleur.Interaction;
 import java.util.Random;
+
+import controleur.Interaction;
 
 public class Voleur extends Personnage {
 
@@ -10,5 +11,5 @@ public class Voleur extends Personnage {
     }
     public void utiliserPouvoir() {}
     public void utiliserPouvoirAvatar() {}
-    
+
 }

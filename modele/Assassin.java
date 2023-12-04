@@ -1,6 +1,6 @@
 package modele;
 
-import controlleur.Interaction;
+import controleur.Interaction;
 
 public class Assassin extends  Personnage{
     public Assassin() {
