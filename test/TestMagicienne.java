@@ -1,8 +1,8 @@
 package test;
 
-import modele.Assassin;
-import modele.Magicienne;
-import modele.Roi;
+import modele.personnage.Assassin;
+import modele.personnage.Magicienne;
+import modele.personnage.Roi;
 
 import modele.Joueur;
 import modele.Pioche;

@@ -1,9 +1,11 @@
-package modele;
+package modele.personnage;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import controleur.Interaction;
+import modele.Caracteristiques;
+import modele.Personnage;
 
 public class Magicienne extends Personnage {
 

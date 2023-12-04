@@ -3,7 +3,7 @@ package test;
 import modele.Caracteristiques;
 import modele.Joueur;
 import modele.Quartier;
-import modele.Eveque;
+import modele.personnage.Eveque;
 
 public class TestEveque {
 

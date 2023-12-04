@@ -1,8 +1,8 @@
 package test;
 
-import modele.Assassin;
-import modele.Roi;
-import modele.Voleur;
+import modele.personnage.Assassin;
+import modele.personnage.Roi;
+import modele.personnage.Voleur;
 
 import modele.Joueur;
 import modele.PlateauDeJeu;

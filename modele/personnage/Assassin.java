@@ -1,8 +1,10 @@
-package modele;
+package modele.personnage;
 
 import controleur.Interaction;
+import modele.Caracteristiques;
+import modele.Personnage;
 
-public class Assassin extends  Personnage{
+public class Assassin extends Personnage {
     public Assassin() {
 		super("Assassin", 1, Caracteristiques.ASSASSIN);
 	}

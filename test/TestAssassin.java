@@ -1,8 +1,8 @@
 package test;
 
-import modele.Assassin;
+import modele.personnage.Assassin;
 import modele.PlateauDeJeu;
-import modele.Roi;
+import modele.personnage.Roi;
 
 public class TestAssassin {
 	public static void main(String[] args) {

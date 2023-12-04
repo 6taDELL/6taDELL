@@ -1,10 +1,8 @@
 package test;
 
-import modele.Caracteristiques;
 import modele.Joueur;
 import modele.PlateauDeJeu;
-import modele.Quartier;
-import modele.Roi;
+import modele.personnage.Roi;
 
 public class TestPlateauDeJeu {
 

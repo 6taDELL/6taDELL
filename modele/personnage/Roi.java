@@ -1,4 +1,9 @@
-package modele;
+package modele.personnage;
+
+import modele.Caracteristiques;
+import modele.Joueur;
+import modele.Personnage;
+import modele.Quartier;
 
 public class Roi extends Personnage {
 
