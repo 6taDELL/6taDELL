@@ -2,6 +2,7 @@ package modele.personnage;
 
 import modele.Caracteristiques;
 import modele.Personnage;
+import modele.Quartier;
 
 public class Marchande extends Personnage {
     public Marchande() {
@@ -9,7 +10,23 @@ public class Marchande extends Personnage {
     }
 
 
-    public void utiliserPouvoir() {}
-    public void utiliserPouvoirAvatar(){}
+    public void utiliserPouvoir() {
+        this.joueur.ajouterPieces(1);
+    }
+
+    public void percevoirRessourcesSpecifiques() {
+        Quartier[] cite = this.getJoueur().getCite();
+        int nbQuartiers = this.getJoueur().nbQuartiersDansCite();
+
+        for (int i = 0; i < nbQuartiers; i++) {
+            if (cite[i] != null && cite[i].getType().equals(Quartier.TYPE_QUARTIERS[3])) {
+                getJoueur().ajouterPieces(1);
+            }
+        }
+    }
+
+    public void utiliserPouvoirAvatar() {
+        this.utiliserPouvoir();
+    }
     
 }
