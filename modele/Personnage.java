@@ -9,8 +9,10 @@ public abstract class Personnage {
     protected boolean vole;
     protected PlateauDeJeu plateau;
     protected boolean ensorcele;
-    private boolean vraiEchevin;
-    private boolean fauxEchevin;
+    protected boolean vraiEchevin;
+    protected boolean fauxEchevin;
+    protected boolean vraieMenace;
+    protected boolean fausseMenace;
 
     public Personnage(String nom, int rang, String caracteristiques) { //Constructeur
         this.nom = nom;
@@ -22,6 +24,8 @@ public abstract class Personnage {
         this.ensorcele = false;
         this.vraiEchevin = false;
         this.fauxEchevin = false;
+        this.vraieMenace = false;
+        this.fausseMenace = false;
     }
 
     public String getNom() { //Retourne le nom du personnage
@@ -129,6 +133,21 @@ public abstract class Personnage {
 
     public boolean getFauxEchevin() {
         return this.fauxEchevin;
+    }
+
+    public void setFausseMenace(boolean bool) {
+        this.fausseMenace = bool;
+    }
+
+    public boolean getFausseMenace() {
+        return this.fausseMenace;
+    }
+    public void setVraieMenace(boolean bool) {
+        this.vraieMenace = bool;
+    }
+
+    public boolean getVraieMenace() {
+        return this.vraieMenace;
     }
 
 }
