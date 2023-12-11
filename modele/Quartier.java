@@ -12,6 +12,7 @@ public class Quartier {
         "COMMERCANT",
         "MERVEILLE"
     };
+private boolean embelli;
 
     public Quartier() { //Constructeur
         super();
@@ -73,5 +74,23 @@ public class Quartier {
         this.type = type;
         this.coutConstruction = coutConstruction;
         this.caracteristiques = "";
+    }
+
+    public boolean getEmbelli() {
+        return embelli;
+    }
+
+    public void setEmbelli(boolean embelli) {
+        this.embelli = embelli;
+    }
+
+    public void embellir(){
+        if(!this.getEmbelli()){
+            this.coutConstruction+=1;
+            this.setEmbelli(true);
+            System.out.println("Le quartier à bien été embelli");
+        }else{
+            System.out.println("Quartier déjà embelli");
+        }
     }
 }
