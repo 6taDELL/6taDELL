@@ -20,7 +20,7 @@ public class TestSorciere {
 		Test.test(sorciere.getNom().equals("Sorciere"),"test du nom du personnage");
 		Test.test(sorciere.getRang()== 1,"test du rang du personnage");
 		Test.test(sorciere.getCaracteristiques().equals(Caracteristiques.SORCIERE),
-				"test des caract�ristiques du personnage");
+				"test des caractéristiques du personnage");
 		Test.test(sorciere.getJoueur()==null, "test de l'initialisation de la variable \"joueur\"");
 		Test.test(sorciere.getAssassine()==false, "test de l'initialisation de la variable \"assassine\"");
 		Test.test(sorciere.getVole()==false, "test de l'initialisation de la variable \"vole\"");
@@ -28,7 +28,7 @@ public class TestSorciere {
 	
 	public void test2(){
 		System.out.println("TEST DE L'UTILISATION DU POUVOIR");
-		// on cr�e un plateau et on ajoute des cartes Quartier � la pioche:		
+		// on crée un plateau et on ajoute des cartes Quartier dans la pioche:		
 		PlateauDeJeu plateau = new PlateauDeJeu();
 		// on ajoute le personnage au plateau:
 		Sorciere sorciere = new Sorciere();
