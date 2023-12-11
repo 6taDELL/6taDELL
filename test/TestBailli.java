@@ -1,5 +1,7 @@
 package test;
-import modele.*;
+
+import modele.Caracteristiques;
+import modele.personnage.Bailli;
 
 public class TestBailli {
 
