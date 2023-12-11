@@ -68,7 +68,6 @@ public class Abbe extends Personnage {
 	}
 
 	public void utiliserPouvoirAvatar() {
-		// TODO Auto-generated method stub
 		int count = 0;
         if(this.getAssassine()){
             System.out.println("Votre personnage a été assassiné");
