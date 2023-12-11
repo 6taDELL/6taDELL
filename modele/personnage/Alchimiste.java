@@ -9,6 +9,13 @@ public class Alchimiste extends Personnage {
         super("Alchimiste", 6, Caracteristiques.ALCHIMISTE);
     }
 
-    public void utiliserPouvoir() {}
-    public void utiliserPouvoirAvatar() {}
+    public void utiliserPouvoir() {
+        System.out.println("Pas de pouvoir");
+        
+    }
+
+    public void utiliserPouvoirAvatar() {
+        System.out.println("Pas de pouvoir");
+        
+    }
 }
