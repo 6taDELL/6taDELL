@@ -8,6 +8,7 @@ public abstract class Personnage {
     protected boolean assassine;
     protected boolean vole;
     protected PlateauDeJeu plateau;
+    protected boolean ensorcele;
 
     public Personnage(String nom, int rang, String caracteristiques) { //Constructeur
         this.nom = nom;
@@ -100,4 +101,9 @@ public abstract class Personnage {
     }
 
     public abstract void utiliserPouvoirAvatar(); //Utilisation du pouvoir spécifique d'un personnage aléatoirement
+
+    public void setEnsorcele(boolean ensorcele) {
+        this.ensorcele = ensorcele;
+    }
+
 }
