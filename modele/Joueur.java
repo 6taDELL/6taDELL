@@ -150,6 +150,15 @@ public class Joueur {
         return retour;
     }
 
+        public Quartier retirerQuartierDansMain(Quartier quartier){
+        if(main.size() == 0){
+            return null;
+        }else{ 
+            main.remove(quartier);
+            return quartier;
+        }
+    }
+
     public void reinitialiser() { //Reinitialiser les données du joueur 
         this.tresor = 0;
         this.main = new ArrayList < Quartier > ();
@@ -157,6 +166,3 @@ public class Joueur {
         this.nbQuartiers = 0;
     }
 }
-
-
-	
