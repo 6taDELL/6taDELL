@@ -17,23 +17,6 @@ public class Jeu {
     public static int orDesTaxes;
     public static int nbPersonnages;
     public static int nbJoueurs;
-    private int numeroConfiguration;
-    private ArrayList<Personnage> listePersonnage = new ArrayList<Personnage>();
-    private ArrayList<Personnage> listePersonnageUtilises = new ArrayList<Personnage>();
-    private ArrayList<Joueur> listeJoueur = new ArrayList<Joueur>();
-    private Interaction interaction = new Interaction();
-    private Joueur premierAFinir;
-    private Joueur joueurGagnant;
-    private Personnage sorciere;
-    private Joueur joueurRoiPatricien;
-    private boolean construitEcurie;
-
-
-    private Personnage persoFaceCachee;
-    
-
-    public static ArrayList<Quartier> quartiersSousMusee = new ArrayList<Quartier>();
-
 
     public Jeu() {
         this.plateauDeJeu = new PlateauDeJeu();
@@ -312,340 +295,70 @@ public class Jeu {
     private void choixPersonnages() {
         System.out.println("\tChoix des personnages :\n");
 
-        int pFaceVisible = 0;
+        int pFaceVisible1 = 0;
+        int pFaceVisible2 = 0;
         int pFaceCachee = 0;
 
-        if(nbPersonnages==8 && nbJoueurs!=2 && nbJoueurs!=3){
-            switch(nbJoueurs){
-                case 4:
-                    pFaceVisible = 2;
-                    pFaceCachee = 1;
-                    break;
-                case 5:
-                    pFaceVisible = 1;
-                    pFaceCachee = 1;
-                    break;
-                case 6:
-                    pFaceVisible = 0;
-                    pFaceCachee = 1;
-                    break;
-                case 7:
-                    pFaceVisible = 0;
-                    pFaceCachee = 1;
-                    break;  
+        do {
+            pFaceVisible1 = generateur.nextInt(this.plateauDeJeu.getNombrePersonnages());
+            pFaceVisible2 = generateur.nextInt(this.plateauDeJeu.getNombrePersonnages());
+            pFaceCachee = generateur.nextInt(this.plateauDeJeu.getNombrePersonnages());
+        } while (pFaceVisible1 == pFaceVisible2 || pFaceVisible2 == pFaceCachee || pFaceVisible1 == pFaceCachee);
 
-            }
-        }else if(nbPersonnages == 9 && nbJoueurs!=2 && nbJoueurs!=3){
-            switch(nbJoueurs){
-                case 4:
-                    pFaceVisible = 3;
-                    pFaceCachee = 1;
-                    break;
-                case 5:
-                    pFaceVisible = 2;
-                    pFaceCachee = 1;
-                    break;
-                case 6:
-                    pFaceVisible = 1;
-                    pFaceCachee = 1;
-                    break;
-                case 7:
-                    pFaceVisible = 0;
-                    pFaceCachee = 1;
-                    break;
-                case 8:
-                    pFaceVisible = 0;
-                    pFaceCachee = 1;
-                    break;    
+        System.out.println("Les personnages " + this.plateauDeJeu.getPersonnage(pFaceVisible1).getNom() + " et " + this.plateauDeJeu.getPersonnage(pFaceVisible2).getNom() + " sont écartés face visible.");
+        System.out.println("Un personnage est écarté face caché");
 
-            }
-
+        Personnage[] listePerso = new Personnage[9];
+        for (int i = 0; i < this.plateauDeJeu.getNombrePersonnages(); i++) {
+            listePerso[i] = this.plateauDeJeu.getPersonnage(i);
         }
+        listePerso[pFaceVisible1] = null;
+        listePerso[pFaceVisible2] = null;
+        listePerso[pFaceCachee] = null;
 
-        
+        int joueurCouronne = 0;
 
-        if(nbJoueurs!=2 && nbJoueurs!=3){
-            for(int i = 0; i < pFaceVisible; i ++){
-                int persoARetirer = generateur.nextInt(listePersonnage.size());
-                Personnage perso = listePersonnage.get(persoARetirer);
-                listePersonnage.remove(persoARetirer);
-                System.out.println("Le personnage " + "\"" + perso.getNom() + "\"" + " est ecarte face visible\n" );
+        for (int i = 0; i < this.plateauDeJeu.getNombreJoueurs(); i++)
+            joueurCouronne = this.plateauDeJeu.getJoueur(i).getPossedeCouronne() ? i : joueurCouronne;
+
+        int playerIteration = 0;
+
+        do {
+            int currentPlayer = (joueurCouronne + playerIteration) % this.plateauDeJeu.getNombreJoueurs();
+
+            System.out.println(
+                "\n----------------------------------------------\n" +
+                "\t\t  " + this.plateauDeJeu.getJoueur(currentPlayer).getNom() + " " + (this.plateauDeJeu.getJoueur(currentPlayer).getPossedeCouronne() == true ? "\n\t   (Joueur couronné)" : "") + "\n" +
+                "     Quel personnage choisissez vous ?\n" +
+                "                                              \n"
+            );
+
+            System.out.print("Liste des personnages :\n");
+            for (int i = 0; i < this.plateauDeJeu.getNombrePersonnages(); i++) {
+                if (listePerso[i] instanceof Personnage)
+                    System.out.println("\t" + i + " - " + this.plateauDeJeu.getPersonnage(i).getNom());
             }
 
-            
-            for(int i = 0; i < pFaceCachee; i ++){
-                int persoARetirer = generateur.nextInt(listePersonnage.size());
-
-                //partie à 7 joueurs avec 8 perso OU partie a 8 joueurs avec 9 personnages
-
-                if((nbJoueurs == 7 && nbPersonnages==8) || (nbJoueurs == 8 && nbPersonnages==9)){
-                    this.persoFaceCachee = listePersonnage.get(persoARetirer);
-                }
-
-                listePersonnage.remove(persoARetirer);
-                System.out.println("Un personnage est ecarte face cachee\n");
-
-            }
-        
-        }
-
-        for(int i = 0; i < listeJoueur.size(); i++){
-            if(listeJoueur.get(i).getPossedeCouronne()){
-                Joueur possedeCouronne = listeJoueur.get(i);
-                listeJoueur.remove(i);
-                listeJoueur.add(0, possedeCouronne);
-            }
-        }
-
-        for(int i = 0; i < listeJoueur.size(); i++){
-
-            if(nbJoueurs!=2 && nbJoueurs!=3){
-                if(listeJoueur.get(0).getNom().equals("Joueur") && listeJoueur.get(i).getNom().equals("Joueur")){
-                    System.out.println("Vous avez la couronne !\n");
-
-                    for(int j = 0; j < listePersonnage.size(); j++){
-                        System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                    }
-                    
-                    System.out.println("\nQuel personnage choisissez vous ?");
-                    int choix = interaction.lireUnEntier(1, listePersonnage.size()) - 1;
-                    
-                    System.out.println("Vous avez choisi le personnage " + this.listePersonnage.get(choix).getNom() + "\n");
-
-                    this.listePersonnage.get(choix).setJoueur(this.listeJoueur.get(i));
-                    this.listePersonnageUtilises.add(listePersonnage.get(choix));
-                    listePersonnage.remove(choix); 
-
-                }else if(listeJoueur.get(i).getNom().equals("Joueur") && !listeJoueur.get(0).getNom().equals("Joueur")) {
-                    System.out.println("A vous de jouer\n");
-
-                    for(int j = 0; j < listePersonnage.size(); j++){
-                        System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                    }
-                    
-                    System.out.println("\nQuel personnage choisissez vous ?");
-                    int choix = interaction.lireUnEntier(1, listePersonnage.size()) - 1;
-
-                    System.out.println("Vous avez choisi le personnage " + this.listePersonnage.get(choix).getNom() + "\n");
-
-                    this.listePersonnage.get(choix).setJoueur(this.listeJoueur.get(i));
-                    this.listePersonnageUtilises.add(listePersonnage.get(choix));
-                    listePersonnage.remove(choix);  
-
-                }
-            
-                    //partie à 7 joueurs et 8 joueurs
-
-                else if(((nbJoueurs == 7 && nbPersonnages==8)||(nbJoueurs == 8 && nbPersonnages == 9)) && i == (listeJoueur.size() - 1)){
-
-                    ArrayList<Personnage> persoAChoisir = new ArrayList<Personnage>();
-                    persoAChoisir.add(persoFaceCachee);
-                    persoAChoisir.add(listePersonnage.get(0));
-
-                    if(listeJoueur.get(i).getNom().equals("Joueur")){
-                        for(int j = 0; j < persoAChoisir.size(); j++){
-                            System.out.println((j+1) + "." + persoAChoisir.get(j).getNom());
-                        }
-                        
-                        System.out.println("\nQuel personnage choisissez vous ?");
-                        int choix = Interaction.lireUnEntier(1, persoAChoisir.size() - 1);
-            
-                        System.out.println("Vous avez choisi le personnage " + persoAChoisir.get(choix).getNom() + "\n");
-            
-                        persoAChoisir.get(choix).setJoueur(this.listeJoueur.get(i));
-                        this.listePersonnageUtilises.add(persoAChoisir.get(choix));
-                        listePersonnage.remove(persoAChoisir.get(choix));  
-
-                    }else{
-
-                        System.out.println("A " + listeJoueur.get(i).getNom() + " de jouer\n");
-
-                        for(int j = 0; j < persoAChoisir.size(); j++){
-                            System.out.println((j+1) + "." + persoAChoisir.get(j).getNom());
-                        }
-                        
-                        
-                        System.out.println("\nQuel personnage choisissez vous ?");
-                        int choix = generateur.nextInt(persoAChoisir.size() - 1) + 1;
-                        System.out.println(choix); 
-                        choix -= 1; 
-
-                        System.out.println("Vous avez choisi le personnage " + persoAChoisir.get(choix).getNom() + "\n");
-            
-                        persoAChoisir.get(choix).setJoueur(this.listeJoueur.get(i));
-                        this.listePersonnageUtilises.add(persoAChoisir.get(choix));
-                        listePersonnage.remove(persoAChoisir.get(choix));  
+            int choix;
+            do {
+                System.out.print("\nVotre choix : ");
+                if (this.plateauDeJeu.getJoueur(currentPlayer).getNom().contains("bot"))
+                    choix = generateur.nextInt(this.plateauDeJeu.getNombrePersonnages());
+                else
+                    choix = Interaction.lireUnEntier(0, this.plateauDeJeu.getNombrePersonnages());
 
 
-                    }
+                if (!(listePerso[choix] instanceof Personnage))
+                    System.out.println("\tImpossible de faire ce choix !");
 
-                }
-                
-                
-                else{
-                    System.out.println("A " + listeJoueur.get(i).getNom() + " de jouer\n");
+            } while (!(listePerso[choix] instanceof Personnage));
 
-                    for(int j = 0; j < listePersonnage.size(); j++){
-                        System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                    }
-                    
-                    System.out.println("\nQuel personnage choisissez vous ?");
-                    int choix = generateur.nextInt(listePersonnage.size());
-                    System.out.println(choix);  
+            this.plateauDeJeu.getPersonnage(choix).setJoueur(this.plateauDeJeu.getJoueur(currentPlayer));
+            listePerso[choix] = null;
 
-                    System.out.println("Vous avez choisi le personnage " + this.listePersonnage.get(choix).getNom() + "\n");
+            playerIteration++;
 
-                    this.listePersonnage.get(choix).setJoueur(this.listeJoueur.get(i));
-                    this.listePersonnageUtilises.add(listePersonnage.get(choix));
-                    listePersonnage.remove(choix);
-                }
-            
-            }
-          
-        }
-
-        int joueur;
-
-        if(nbJoueurs==2){
-            for(int o=0; o<4; o++){
-                if(o==0 || o==2){
-                    joueur = 0;
-                }else{
-                    joueur = 1;
-                }
-                System.out.println("A " + listeJoueur.get(joueur).getNom() + " de jouer\n");
-
-                for(int j = 0; j < listePersonnage.size(); j++){
-                    System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                }
-                System.out.println("Choisissez un personnage à écarter :\n");
-                int choix=0;
-                if(listeJoueur.get(joueur).getNom().equals("Joueur")){
-                    choix = interaction.lireUnEntier(1, listePersonnage.size())-1;
-                }else{
-                    choix = generateur.nextInt(listePersonnage.size());
-                }
-                listePersonnage.remove(choix);
-
-                for(int j = 0; j < listePersonnage.size(); j++){
-                    System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                }
-
-                System.out.println("Choisissez un personnage à prendre :`\n");
-                if(listeJoueur.get(joueur).getNom().equals("Joueur")){
-                    choix = interaction.lireUnEntier(1, listePersonnage.size())-1;
-                }else{
-                    choix = generateur.nextInt(listePersonnage.size());
-                }
-                this.listePersonnage.get(choix).setJoueur(this.listeJoueur.get(joueur));
-                listePersonnageUtilises.add(listePersonnage.get(choix));
-                listePersonnage.remove(choix);
-                
-            }
-        }else if(nbJoueurs==3){
-
-            for(int o=0; o<6; o++){
-
-                if(o==0 || o==3){
-                    joueur =0;
-                }else if(o==1 || o==4){
-                    joueur =1;
-                }else{
-                    joueur =2;
-                }
-                for(int j = 0; j < listePersonnage.size(); j++){
-                    System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                }
-
-                int choix=0;
-                System.out.println("Choisissez un personnage à prendre :`\n");
-                if(listeJoueur.get(joueur).getNom().equals("Joueur")){
-                    choix = interaction.lireUnEntier(1, listePersonnage.size())-1;
-                }else{
-                    choix = generateur.nextInt(listePersonnage.size());
-                }
-                this.listePersonnage.get(choix).setJoueur(this.listeJoueur.get(joueur));
-                listePersonnageUtilises.add(listePersonnage.get(choix));
-                listePersonnage.remove(choix);
-                for(int j = 0; j < listePersonnage.size(); j++){
-                    System.out.println("\n"+(j+1) + "." + listePersonnage.get(j).getNom()+" caracteristiques: "+listePersonnage.get(j).getCaracteristiques());
-                }
-
-                if(o==0 || o==2){
-                    System.out.println("Choisissez un personnage à écarter :\n");
-                    if(listeJoueur.get(joueur).getNom().equals("Joueur")){
-                        choix = interaction.lireUnEntier(1, listePersonnage.size())-1;
-                    }else{
-                        choix = generateur.nextInt(listePersonnage.size());
-                    }
-                    listePersonnage.remove(choix);
-                }
-                
-            }
-            listePersonnage.remove(0);
-        }
-
-        for(int i = 0; i < this.listeJoueur.size(); i++){
-            if(this.listeJoueur.get(i).nbQuartiersDansCite()>0){
-                for(int j = 0; j < this.listeJoueur.get(i).nbQuartiersDansCite(); j++){
-                    if(this.listeJoueur.get(i).getCite()[j]!=null){
-                        if(this.listeJoueur.get(i).getCite()[j].equals(Configuration.theatre)){
-                            System.out.println("Vous avez la merveille Theatre.\nVous pouvez choisir d'echanger votre personnage avec un autre joueur.\nVoulez-vous echanger ?");
-    
-                            boolean echangerPerso;
-    
-                            if(this.listeJoueur.get(i).getNom().equals("Joueur")){
-                                echangerPerso = Interaction.lireOuiOuNon();
-                            }else{
-                                echangerPerso = generateur.nextBoolean();
-                            }
-    
-                            if(echangerPerso){
-                                for(int k = 0; k < this.listeJoueur.size(); k++){
-                                    System.out.println((k+1) + ". " + this.listeJoueur.get(k).getNom());
-                                }
-    
-                                System.out.println("Avec quel joueur voulez-vous echanger votre personnage ?");
-    
-                                boolean choisiLuiMeme = false;
-                                int echangerAvecJoueur = 0;
-    
-                                do{
-    
-                                    choisiLuiMeme = false;
-    
-                                    if(this.listeJoueur.get(i).getNom().equals("Joueur")){
-                                        echangerAvecJoueur = Interaction.lireUnEntier(1, this.listeJoueur.size());
-                                        echangerAvecJoueur--;
-                                    }else{
-                                        echangerAvecJoueur = generateur.nextInt(this.listeJoueur.size());
-                                    }
-    
-                                    if(this.listeJoueur.get(echangerAvecJoueur).equals(this.listeJoueur.get(i))){
-                                        choisiLuiMeme = true;
-                                        System.out.println("Vous ne pouvez pas vous choisir vous-même");
-                                    }
-    
-                                }while(choisiLuiMeme);
-                                Personnage persoEchange1 = this.listeJoueur.get(echangerAvecJoueur).getPersonnage();
-                                Personnage persoEchange2 = this.listeJoueur.get(i).getPersonnage();
-    
-                                persoEchange1.setJoueur(this.listeJoueur.get(i));
-                                persoEchange2.setJoueur(this.listeJoueur.get(echangerAvecJoueur));
-    
-                                System.out.println("Les personnages ont bien ete echanges.");
-    
-                            }
-                        }
-                    }
-                    
-            
-                }
-            }
-                
-        }
-
-        
+        } while (playerIteration <= this.plateauDeJeu.getNombreJoueurs() - 1);
 
         System.out.println(
             "\n\tLe choix des personnages est terminé.\n" +
