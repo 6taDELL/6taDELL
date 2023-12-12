@@ -101,7 +101,7 @@ public class Configuration {
     private static Personnage voleur = new Voleur();
 
     //Déclaration des Joueurs
-    private static Joueur j1 = new Joueur("Bob");
+    private static Joueur j1 = new Joueur("Joueur");
     private static Joueur j2 = new Joueur("bot1");
     private static Joueur j3 = new Joueur("bot2");
     private static Joueur j4 = new Joueur("bot3");
@@ -160,18 +160,18 @@ public class Configuration {
 
         //Ajout des Merveilles à la pioche
         pioche.ajouter(bibliotheque);
-        pioche.ajouter(forge);
         pioche.ajouter(carriere);
-        pioche.ajouter(laboratoire);
         pioche.ajouter(courDesMiracles);
-        pioche.ajouter(manufacture);
         pioche.ajouter(donjon);
-        pioche.ajouter(salleDesCartes);
         pioche.ajouter(dracoport);
-        pioche.ajouter(statueEquestre);
         pioche.ajouter(ecoleDeMagie);
-        pioche.ajouter(tresorImperial);
         pioche.ajouter(fontaineAuxSouhaits);
+        pioche.ajouter(forge);
+        pioche.ajouter(laboratoire);
+        pioche.ajouter(manufacture);
+        pioche.ajouter(salleDesCartes);
+        pioche.ajouter(statueEquestre);
+        pioche.ajouter(tresorImperial);
         pioche.ajouter(tripot);
 
         pioche.melanger();
