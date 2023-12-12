@@ -69,27 +69,27 @@ public class Configuration {
     public static Quartier courDesMiracles = new Quartier("Cour des Miracles", Quartier.TYPE_QUARTIERS[4], 2, "Pour le calcul du score final, la Cour des Miracles est consideree comme un quartier de type (couleur) de votre choix. Dans la cas ou le proprietaire la considere comme un quartier noble, militaire, marchant ou religieux, la Cour des Miracles ne peut plus etre consideree comme une merveille.");
     public static Quartier donjon = new Quartier("Donjon", Quartier.TYPE_QUARTIERS[4], 3, "Le Donjon ne peut etre affecte par les pouvoirs des personnages de rang 8.");
     public static Quartier dracoport = new Quartier("Dracoport", Quartier.TYPE_QUARTIERS[4], 6, "Marquez 2 points supplementaires a la fin de la partie.");
-   public static Quartier ecoleDeMagie = new Quartier("Ecole de Magie", Quartier.TYPE_QUARTIERS[4], 6, "Pour la perception des revenus des personnages, l’Ecole de Magie est consideree comme un quartier du type (couleur) de votre choix.");
-   public static Quartier ecuries = new Quartier("Ecuries", Quartier.TYPE_QUARTIERS[4], 2, "Vous pouvez bˆatir les Ecuries sans qu’elles comptent dans votre permis de construire. Si ´les Ecuries sont confisqu´ees par l’ ´ Echevin, il peut quand mˆeme bˆatir un autre quartier que ´celui-ci.");
-   public static Quartier fontaineAuxSouhaits = new Quartier("Fontaine aux Souhaits", Quartier.TYPE_QUARTIERS[4], 5, " la fin de la partie, marquez 1 point supplementaire par merveille dans votre cite, y compris la Fontaine aux Souhaits");
-   public static Quartier forge = new Quartier("Forge", Quartier.TYPE_QUARTIERS[4], 5, "Une fois par tour, vous pouvez payez 2 pieces d’or pour piocher 3 cartes");
-   public static Quartier grandeMuraille = new Quartier("Grande Muraille", Quartier.TYPE_QUARTIERS[4], 6, "Les personnages de rang 8 doivent payer 1 pi`ece d’or suppl´ementaire pour affecter un quartier de votre cit´e. La Grande Muraille n’affecte pas le coˆut de construction des quartiers de la cit´e du Diplomate quand il utilise son pouvoir.");
-   public static Quartier hospice = new Quartier("Hospice", Quartier.TYPE_QUARTIERS[4], 4, "Si vous n’avez aucune pi`ece d’or dans votre tr´esor `a la fin de votre tour, gagnez 1 pi`ece d’or. Si la Sorci`ere ne reprend pas son tour de jeu, elle ne le termine donc pas et ne peut pas utiliser l’effet de l’Hospice `a la fin de son tour. L’Alchimiste utilise l’effet de l’Hospice avant d’appliquer son propre pouvoir.");
-   public static Quartier laboratoire = new Quartier("Laboratoire", Quartier.TYPE_QUARTIERS[4], 5, "Une fois par tour, vous pouvez defausser 1 carte pour recevoir 2 pieces d’or.");
-   public static Quartier manufacture = new Quartier("Manufacture", Quartier.TYPE_QUARTIERS[4], 5, "Payez 1 piece d’or de moins lorsque vous batissez une autre merveille.");
-   public static Quartier mineDOr = new Quartier("Mine D'Or", Quartier.TYPE_QUARTIERS[4], 6, "Si vous choisissez de recevoir des pi`eces d’or en d´ebut de tour, prenez-en 1 suppl´ementaire.");
-   public static Quartier monument = new Quartier("Monument", Quartier.TYPE_QUARTIERS[4], 4, "Vous ne pouvez pas bˆatir le Monument si vous avez d´ej`a au moins 5 quartiers dans votre cit´e. Le Monument compte comme 2 quartiers pour compl´eter votre cit´e.");
-   public static Quartier musee = new Quartier("Musee", Quartier.TYPE_QUARTIERS[4], 4, "Une fois par tour, vous pouvez placer une carte de votre main, face cach´ee, sous le Mus´ee. A` la fin de la partie, marquez 1 point suppl´ementaire par carte sous le Mus´ee. Si le Mus´ee est d´eplac´e d’une cit´e `a une autre, il conserve toutes les cartes qui ´etaient dessous. Si le Mus´ee est d´etruit, les cartes sont d´efauss´ees, face cach´ee, sous la pioche.");
-   public static Quartier necropole = new Quartier("Necropole", Quartier.TYPE_QUARTIERS[4], 5, "Pour bˆatir la n´ecropole, vous pouvez d´etruire un quartier de votre cit´e au lieu de payer son coˆut de construction. Le Bailli ne peut pas confisquer la N´ecropole sans payer son coˆut de construction");
-   public static Quartier observatoire = new Quartier("Observatoire", Quartier.TYPE_QUARTIERS[4], 4, "Si vous choisissez de piocher des cartes au d´ebut de votre tour, vous choisissez la carte parmi 3 cartes au lieu de 2.");
-   public static Quartier parc = new Quartier("Parc", Quartier.TYPE_QUARTIERS[4], 6, "Si vous n’avez aucune carte en main `a la fin de votre tour, piochez 2 cartes. Si la Sorci`ere ne reprend pas son tour, elle ne peut pas utiliser l’effet du Parc `a la fin de son tour.");
-   public static Quartier poudriere = new Quartier("Poudriere", Quartier.TYPE_QUARTIERS[4], 3, "Durant votre tour, vous pouvez d´etuire simultan´ement la Poudri`ere et un autre quartier de votre choix. Vous ne pouvez pas d´etruire un quartier d’une cit´e compl`ete.");
-   public static Quartier salleDesCartes = new Quartier("Salle des Cartes", Quartier.TYPE_QUARTIERS[4], 5, "A la fin de la partie, marquez 1 point supplementaire par carte dans votre main.");
-   public static Quartier statueEquestre = new Quartier("Statue Equestre", Quartier.TYPE_QUARTIERS[4], 3, "Si vous d´etenez le Couronne a la fin de la partie, marquez 5 points supplementaires.");
-   public static Quartier theatre = new Quartier("Theatre", Quartier.TYPE_QUARTIERS[4], 6, "A la fin de la phase de s´election, vous pouvez ´echanger votre carte Personnage face cach´ee `avec celle d’un autre joueur. Le propri´etaire du Th´eˆatre choisit avec qui il fait l’´echange, sans avoir vu aucune des cartes des autres joueurs. Les cartes ´echang´ees en peuvent ˆetre r´ev´el´ees aux autres joueurs avant d’ˆetre appel´ees. Dans une partie `a 2 ou 3 joueurs, le propri´etaire du Th´eˆatre choisit le carte Personnage parmi les deux cartes du joueur choisi pour l’´echange, sans les regarder.");
-   public static Quartier tourDIvoire = new Quartier("Tour D'Ivoire", Quartier.TYPE_QUARTIERS[4], 5, "Si la Tour d’Ivoir est votre unique merveille `a la fin de la partie, marquez 5 points suppl´ementaires. Si la Cour des Miracles et la Tour d’Ivoire sont les deux seules merveilles d’une cit´e, et que le joueur d´ecide de consid´erer la Cour des Miracles comme n’´etant pas plus une merveille, alors il peut b´en´eficier du bonus de la Tour d’Ivoire.");
-   public static Quartier tresorImperial = new Quartier("Tresor Imperial", Quartier.TYPE_QUARTIERS[4], 5, "A la fin de la partie, marquez 1 point supplementaire par piece d’or dans votre tresor.");
-   public static Quartier tripot = new Quartier("Tripot", Quartier.TYPE_QUARTIERS[4], 6, "Vous pouvez payer tout ou partie du cout de construction du Tripot en cartes de votre main, au prix de 1 carte pour 1 piece d’or. Si le Tripot est confisque par l’Echevin, le joueur n’est rembourse que de l’or qu’il a depense, pas des cartes.");
+    public static Quartier ecoleDeMagie = new Quartier("Ecole de Magie", Quartier.TYPE_QUARTIERS[4], 6, "Pour la perception des revenus des personnages, l’Ecole de Magie est consideree comme un quartier du type (couleur) de votre choix.");
+    public static Quartier ecuries = new Quartier("Ecuries", Quartier.TYPE_QUARTIERS[4], 2, "Vous pouvez bˆatir les Ecuries sans qu’elles comptent dans votre permis de construire. Si ´les Ecuries sont confisqu´ees par l’ ´ Echevin, il peut quand mˆeme bˆatir un autre quartier que ´celui-ci.");
+    public static Quartier fontaineAuxSouhaits = new Quartier("Fontaine aux Souhaits", Quartier.TYPE_QUARTIERS[4], 5, " la fin de la partie, marquez 1 point supplementaire par merveille dans votre cite, y compris la Fontaine aux Souhaits");
+    public static Quartier forge = new Quartier("Forge", Quartier.TYPE_QUARTIERS[4], 5, "Une fois par tour, vous pouvez payez 2 pieces d’or pour piocher 3 cartes");
+    public static Quartier grandeMuraille = new Quartier("Grande Muraille", Quartier.TYPE_QUARTIERS[4], 6, "Les personnages de rang 8 doivent payer 1 pi`ece d’or suppl´ementaire pour affecter un quartier de votre cit´e. La Grande Muraille n’affecte pas le coˆut de construction des quartiers de la cit´e du Diplomate quand il utilise son pouvoir.");
+    public static Quartier hospice = new Quartier("Hospice", Quartier.TYPE_QUARTIERS[4], 4, "Si vous n’avez aucune pi`ece d’or dans votre tr´esor `a la fin de votre tour, gagnez 1 pi`ece d’or. Si la Sorci`ere ne reprend pas son tour de jeu, elle ne le termine donc pas et ne peut pas utiliser l’effet de l’Hospice `a la fin de son tour. L’Alchimiste utilise l’effet de l’Hospice avant d’appliquer son propre pouvoir.");
+    public static Quartier laboratoire = new Quartier("Laboratoire", Quartier.TYPE_QUARTIERS[4], 5, "Une fois par tour, vous pouvez defausser 1 carte pour recevoir 2 pieces d’or.");
+    public static Quartier manufacture = new Quartier("Manufacture", Quartier.TYPE_QUARTIERS[4], 5, "Payez 1 piece d’or de moins lorsque vous batissez une autre merveille.");
+    public static Quartier mineDOr = new Quartier("Mine D'Or", Quartier.TYPE_QUARTIERS[4], 6, "Si vous choisissez de recevoir des pi`eces d’or en d´ebut de tour, prenez-en 1 suppl´ementaire.");
+    public static Quartier monument = new Quartier("Monument", Quartier.TYPE_QUARTIERS[4], 4, "Vous ne pouvez pas bˆatir le Monument si vous avez d´ej`a au moins 5 quartiers dans votre cit´e. Le Monument compte comme 2 quartiers pour compl´eter votre cit´e.");
+    public static Quartier musee = new Quartier("Musee", Quartier.TYPE_QUARTIERS[4], 4, "Une fois par tour, vous pouvez placer une carte de votre main, face cach´ee, sous le Mus´ee. A` la fin de la partie, marquez 1 point suppl´ementaire par carte sous le Mus´ee. Si le Mus´ee est d´eplac´e d’une cit´e `a une autre, il conserve toutes les cartes qui ´etaient dessous. Si le Mus´ee est d´etruit, les cartes sont d´efauss´ees, face cach´ee, sous la pioche.");
+    public static Quartier necropole = new Quartier("Necropole", Quartier.TYPE_QUARTIERS[4], 5, "Pour bˆatir la n´ecropole, vous pouvez d´etruire un quartier de votre cit´e au lieu de payer son coˆut de construction. Le Bailli ne peut pas confisquer la N´ecropole sans payer son coˆut de construction");
+    public static Quartier observatoire = new Quartier("Observatoire", Quartier.TYPE_QUARTIERS[4], 4, "Si vous choisissez de piocher des cartes au d´ebut de votre tour, vous choisissez la carte parmi 3 cartes au lieu de 2.");
+    public static Quartier parc = new Quartier("Parc", Quartier.TYPE_QUARTIERS[4], 6, "Si vous n’avez aucune carte en main `a la fin de votre tour, piochez 2 cartes. Si la Sorci`ere ne reprend pas son tour, elle ne peut pas utiliser l’effet du Parc `a la fin de son tour.");
+    public static Quartier poudriere = new Quartier("Poudriere", Quartier.TYPE_QUARTIERS[4], 3, "Durant votre tour, vous pouvez d´etuire simultan´ement la Poudri`ere et un autre quartier de votre choix. Vous ne pouvez pas d´etruire un quartier d’une cit´e compl`ete.");
+    public static Quartier salleDesCartes = new Quartier("Salle des Cartes", Quartier.TYPE_QUARTIERS[4], 5, "A la fin de la partie, marquez 1 point supplementaire par carte dans votre main.");
+    public static Quartier statueEquestre = new Quartier("Statue Equestre", Quartier.TYPE_QUARTIERS[4], 3, "Si vous d´etenez le Couronne a la fin de la partie, marquez 5 points supplementaires.");
+    public static Quartier theatre = new Quartier("Theatre", Quartier.TYPE_QUARTIERS[4], 6, "A la fin de la phase de s´election, vous pouvez ´echanger votre carte Personnage face cach´ee `avec celle d’un autre joueur. Le propri´etaire du Th´eˆatre choisit avec qui il fait l’´echange, sans avoir vu aucune des cartes des autres joueurs. Les cartes ´echang´ees en peuvent ˆetre r´ev´el´ees aux autres joueurs avant d’ˆetre appel´ees. Dans une partie `a 2 ou 3 joueurs, le propri´etaire du Th´eˆatre choisit le carte Personnage parmi les deux cartes du joueur choisi pour l’´echange, sans les regarder.");
+    public static Quartier tourDIvoire = new Quartier("Tour D'Ivoire", Quartier.TYPE_QUARTIERS[4], 5, "Si la Tour d’Ivoir est votre unique merveille `a la fin de la partie, marquez 5 points suppl´ementaires. Si la Cour des Miracles et la Tour d’Ivoire sont les deux seules merveilles d’une cit´e, et que le joueur d´ecide de consid´erer la Cour des Miracles comme n’´etant pas plus une merveille, alors il peut b´en´eficier du bonus de la Tour d’Ivoire.");
+    public static Quartier tresorImperial = new Quartier("Tresor Imperial", Quartier.TYPE_QUARTIERS[4], 5, "A la fin de la partie, marquez 1 point supplementaire par piece d’or dans votre tresor.");
+    public static Quartier tripot = new Quartier("Tripot", Quartier.TYPE_QUARTIERS[4], 6, "Vous pouvez payer tout ou partie du cout de construction du Tripot en cartes de votre main, au prix de 1 carte pour 1 piece d’or. Si le Tripot est confisque par l’Echevin, le joueur n’est rembourse que de l’or qu’il a depense, pas des cartes.");
     
 
     //Déclaration des Personnages
@@ -102,11 +102,11 @@ public class Configuration {
     private static Personnage roi = new Roi();
     private static Personnage voleur = new Voleur();
 
+    private int nbJoueur = 0;
     //Déclaration des Joueurs
-    private static Joueur j1 = new Joueur("Joueur");
-    private static Joueur j2 = new Joueur("bot1");
-    private static Joueur j3 = new Joueur("bot2");
-    private static Joueur j4 = new Joueur("bot3");
+    public void setNbJoueur(int nbJoueur){
+        this.nbJoueur = nbJoueur;
+    }
 
     public static Pioche nouvellePioche() {
         Pioche pioche = new Pioche();
@@ -155,10 +155,7 @@ public class Configuration {
         plateau.ajouterPersonnage(roi);
         plateau.ajouterPersonnage(voleur);
         //Ajout des Joueurs au plateau de jeu
-        plateau.ajouterJoueur(j1);
-        plateau.ajouterJoueur(j2);
-        plateau.ajouterJoueur(j3);
-        plateau.ajouterJoueur(j4);
+        
 
         //Ajout des Merveilles à la pioche
         pioche.ajouter(bibliotheque);
@@ -203,10 +200,7 @@ public class Configuration {
         pioche.ajouter(tourDIvoire);
         
         //Ajout des Joueurs au plateau de jeu
-        plateau.ajouterJoueur(j1);
-        plateau.ajouterJoueur(j2);
-        plateau.ajouterJoueur(j3);
-        plateau.ajouterJoueur(j4);
+        
         
         
         

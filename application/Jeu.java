@@ -14,6 +14,8 @@ public class Jeu {
     private PlateauDeJeu plateauDeJeu;
     private Random generateur;
     public static int orDesTaxes;
+    public static int nbPersonnages;
+    public static int nbJoueurs;
 
     public Jeu() {
         this.plateauDeJeu = new PlateauDeJeu();
@@ -50,6 +52,30 @@ public class Jeu {
     }
 
     private void initialisation() {
+        //implémentation nombre de Joueurs
+        nbPersonnages = 8;
+        nbJoueurs = 0;
+
+        System.out.println("Vous voulez une partie de combien de joueurs ?\n");
+        nbJoueurs = Interaction.lireUnEntier(2, 8);
+
+        if(nbJoueurs==2){
+
+            nbPersonnages=8;
+
+        }else if(nbJoueurs ==3){
+
+            nbPersonnages=9;
+
+        }else if(nbJoueurs == 8){
+
+            nbPersonnages = 9;
+
+        }else{
+            System.out.println("Vous voulez une partie de combien de personnages ?\n");
+            nbPersonnages = Interaction.lireUnEntier(8, 9);
+        }
+        
         //or des taxes
 
         orDesTaxes = 0;
