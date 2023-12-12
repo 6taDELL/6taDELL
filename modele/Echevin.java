@@ -1,10 +1,8 @@
-package modele.personnage;
+package modele;
 
 import java.util.Random;
 
 import controleur.Interaction;
-import modele.Caracteristiques;
-import modele.Personnage;
 
 public class Echevin extends Personnage {
     public Echevin() {

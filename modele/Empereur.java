@@ -1,12 +1,9 @@
-package modele.personnage;
+package modele;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 import controleur.Interaction;
-import modele.Caracteristiques;
-import modele.Joueur;
-import modele.Personnage;
 
 public class Empereur extends Personnage {
 

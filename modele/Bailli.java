@@ -1,11 +1,9 @@
-package modele.personnage;
+package modele;
 
 import java.util.Random;
 
-import application.Jeu.orDesTaxes;
+import application.Jeu;
 import controleur.Interaction;
-import modele.Caracteristiques;
-import modele.Personnage;
 
 public class Bailli extends Personnage{
 

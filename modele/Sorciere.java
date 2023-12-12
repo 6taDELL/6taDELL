@@ -1,11 +1,8 @@
-package modele.personnage;
+package modele;
 
 import java.util.Random;
 
 import controleur.Interaction;
-import modele.Caracteristiques;
-import modele.Joueur;
-import modele.Personnage;
 
 public class Sorciere extends Personnage {
     public Sorciere() {

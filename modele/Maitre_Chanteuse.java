@@ -1,11 +1,8 @@
-package modele.personnage;
-
-import modele.Personnage;
+package modele;
 
 import java.util.Random;
 
 import controleur.Interaction;
-import modele.Caracteristiques;
 
 public class Maitre_Chanteuse extends Personnage{
 

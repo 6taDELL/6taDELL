@@ -1,18 +1,18 @@
 package application;
 
-import modele.personnage.Architecte;
-import modele.personnage.Assassin;
-import modele.personnage.Condottiere;
-import modele.personnage.Eveque;
+import modele.Architecte;
+import modele.Assassin;
+import modele.Condottiere;
+import modele.Eveque;
 import modele.Joueur;
-import modele.personnage.Magicienne;
-import modele.personnage.Marchande;
+import modele.Magicienne;
+import modele.Marchande;
 import modele.Personnage;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Roi;
-import modele.personnage.Voleur;
+import modele.Roi;
+import modele.Voleur;
 
 public class Configuration {
     //Déclaration des Quartiers

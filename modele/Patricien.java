@@ -1,7 +1,4 @@
-package modele.personnage;
-
-import modele.Caracteristiques;
-import modele.Personnage;
+package modele;
 
 public class Patricien extends Personnage {
 

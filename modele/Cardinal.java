@@ -1,8 +1,4 @@
-package modele.personnage;
-
-import modele.Caracteristiques;
-import modele.Personnage;
-import modele.Quartier;
+package modele;
 
 public class Cardinal extends Personnage {
     

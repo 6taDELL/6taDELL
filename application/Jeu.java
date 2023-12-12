@@ -13,7 +13,7 @@ public class Jeu {
     private int joueurPersoRangMax = 0;
     private PlateauDeJeu plateauDeJeu;
     private Random generateur;
-    private static int orDesTaxes;
+    public static int orDesTaxes;
 
     public Jeu() {
         this.plateauDeJeu = new PlateauDeJeu();

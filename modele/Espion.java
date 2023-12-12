@@ -1,11 +1,8 @@
-package modele.personnage;
+package modele;
 
 import java.util.Random;
 
 import controleur.Interaction;
-import modele.Caracteristiques;
-import modele.Personnage;
-import modele.Quartier;
 
 public class Espion extends Personnage {
 

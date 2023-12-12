@@ -1,11 +1,7 @@
-package modele.personnage;
+package modele;
 
 import java.util.Random;
 import controleur.Interaction;
-import modele.Caracteristiques;
-import modele.Joueur;
-import modele.Personnage;
-import modele.PlateauDeJeu;
 
 public class Assassin extends Personnage {
     public Assassin() {

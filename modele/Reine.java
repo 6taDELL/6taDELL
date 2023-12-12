@@ -1,8 +1,4 @@
-package modele.personnage;
-
-import modele.Caracteristiques;
-import modele.Joueur;
-import modele.Personnage;
+package modele;
 
 public class Reine extends Personnage{
 
