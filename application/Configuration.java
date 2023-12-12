@@ -268,11 +268,78 @@ public class Configuration {
         plateau.ajouterPersonnage(negociant);
         plateau.ajouterPersonnage(architecte);
         plateau.ajouterPersonnage(capitaine);
-        plateau.ajouterPersonnage(reine);
+        if(Jeu.nbPersonnages ==9 && Jeu.nbJoueurs!=3 && Jeu.nbJoueurs!=4){
+            plateau.ajouterPersonnage(reine);
+    
+        }else if(Jeu.nbPersonnages ==9 && (Jeu.nbJoueurs==3 || Jeu.nbJoueurs==4) ){
+            plateau.ajouterPersonnage(artiste);
+
+        }
         
         pioche.melanger();
 
         plateau.setPioche(pioche);
+
+        switch(Jeu.nbJoueurs){
+
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 3:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 8:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("ORDI 7"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+        }
 
         return plateau;
 
@@ -298,16 +365,84 @@ public class Configuration {
         plateau.ajouterPersonnage(sorciere);
         plateau.ajouterPersonnage(maitre_chanteuse);
         plateau.ajouterPersonnage(magicienne);
-        plateau.ajouterPersonnage(empereur);
+        if(Jeu.nbJoueurs!=2 && Jeu.nbJoueurs!=3){
+            plateau.ajouterPersonnage(empereur);
+        }else if(Jeu.nbJoueurs==2 || Jeu.nbJoueurs==3){
+            plateau.ajouterPersonnage(roi);
+        }
         plateau.ajouterPersonnage(abbe);
         plateau.ajouterPersonnage(alchimiste);
         plateau.ajouterPersonnage(architecte);
         plateau.ajouterPersonnage(condotierre);
-        plateau.ajouterPersonnage(reine);
+        if(Jeu.nbPersonnages ==9){
+            plateau.ajouterPersonnage(bailli);
+    
+        }
         
         pioche.melanger();
 
         plateau.setPioche(pioche);
+
+        switch(Jeu.nbJoueurs){
+
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 3:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 8:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("ORDI 7"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+        }
 
         return plateau;
         
@@ -343,17 +478,82 @@ public class Configuration {
         plateau.ajouterPersonnage(sorciere);
         plateau.ajouterPersonnage(espion);
         plateau.ajouterPersonnage(voyante);
-        plateau.ajouterPersonnage(empereur);
+        if(Jeu.nbJoueurs!=2 && Jeu.nbJoueurs!=3){
+            plateau.ajouterPersonnage(empereur);
+        }else if(Jeu.nbJoueurs==2 || Jeu.nbJoueurs==3){
+            plateau.ajouterPersonnage(roi);
+        }
         plateau.ajouterPersonnage(eveque);
         plateau.ajouterPersonnage(marchande);
         plateau.ajouterPersonnage(archiviste);
         plateau.ajouterPersonnage(diplomate);
-        plateau.ajouterPersonnage(artiste);
+        if(Jeu.nbPersonnages==9){
+            plateau.ajouterPersonnage(artiste);
+        }
     
 
         pioche.melanger();
         plateau.setPioche(pioche);
+        switch(Jeu.nbJoueurs){
 
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 3:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 8:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("ORDI 7"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+        }
         return plateau;
         }
 
@@ -392,11 +592,78 @@ public class Configuration {
         plateau.ajouterPersonnage(alchimiste);
         plateau.ajouterPersonnage(navigatrice);
         plateau.ajouterPersonnage(capitaine);
-        plateau.ajouterPersonnage(reine);
+
+        if(Jeu.nbPersonnages ==9 && Jeu.nbJoueurs!=3 && Jeu.nbJoueurs!=4){
+            plateau.ajouterPersonnage(reine);
+    
+        }else if(Jeu.nbPersonnages ==9 && (Jeu.nbJoueurs==3 || Jeu.nbJoueurs==4) ){
+            plateau.ajouterPersonnage(artiste);
+
+        }
     
 
         pioche.melanger();
         plateau.setPioche(pioche);
+        switch(Jeu.nbJoueurs){
+
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 3:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 8:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("ORDI 7"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+        }
 
         return plateau;
     }
@@ -412,7 +679,9 @@ public class Configuration {
         plateau.ajouterPersonnage(negociant);
         plateau.ajouterPersonnage(archiviste);
         plateau.ajouterPersonnage(diplomate);
-        plateau.ajouterPersonnage(artiste);
+        if(Jeu.nbPersonnages ==9){
+            plateau.ajouterPersonnage(artiste);
+        }
         //Ajout des Joueurs au plateau de jeu
         
 
@@ -429,6 +698,66 @@ public class Configuration {
         pioche.melanger();
 
         plateau.setPioche(pioche);
+        switch(Jeu.nbJoueurs){
+
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 3:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 8:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("ORDI 7"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+        }
 
         return plateau;
     }
@@ -444,7 +773,9 @@ public class Configuration {
         plateau.ajouterPersonnage(marchande);
         plateau.ajouterPersonnage(navigatrice);
         plateau.ajouterPersonnage(condotierre);
-        plateau.ajouterPersonnage(bailli);
+        if(Jeu.nbPersonnages ==9){
+            plateau.ajouterPersonnage(bailli);
+        }
         //Ajout des Joueurs au plateau de jeu
         
 
@@ -467,7 +798,66 @@ public class Configuration {
         pioche.melanger();
 
         plateau.setPioche(pioche);
+        switch(Jeu.nbJoueurs){
 
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 3:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 8:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("ORDI 7"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+        }
         return plateau;
     }
 
