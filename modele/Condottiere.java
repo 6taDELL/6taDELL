@@ -50,7 +50,9 @@ public class Condottiere extends Personnage {
 
                 do {
                     if (listeJoueur == 0) {
-                        choixDuJoueur = false;
+                        choixDuJoueur = true;
+                        System.out.println("Vous avez finilement choisi de ne pas utiliser son pouvoir");
+
                     } else {
                         if (joueurChoisi.getPersonnage().getNom().equals("Eveque") && joueurChoisi.getPersonnage().getAssassine() == false) {
                             System.out.println("Impossible de choisir un Eveque vivant");
@@ -60,22 +62,26 @@ public class Condottiere extends Personnage {
                             boolean choixDuQuartier = false;
 
                             do {
-                                System.out.println("Quel quartier choisissez-vous ? ");
-                                int listeQuartiers = Interaction.lireUnEntier(1, (joueurChoisi.nbQuartiersDansCite() + 1));
-
-                                Quartier quartierChoisi = joueurChoisi.getCite()[listeQuartiers - 1];
-
-                                if (this.getJoueur().nbPieces() < (quartierChoisi.getCout() - 1)) {
-                                    System.out.println("Votre trésor n’est pas suffisant");
-                                } else {
+                                if (joueurChoisi.nbQuartiersDansCite() == 0) {
                                     choixDuQuartier = true;
-                                    System.out.println(joueurChoisi.nbQuartiersDansCite());
-                                    joueurChoisi.retirerQuartierDansCite(quartierChoisi.getNom());
-                                    System.out.println("Vous avez démoli " + quartierChoisi.getNom() + " de la cité de " + joueurChoisi.getNom());
+                                    System.out.println("Il n'y a pas de quartier dans cette cité. Sortie de la boucle.");
+                                } else {
+                                    System.out.println("Quel quartier choisissez-vous ? ");
+                                    int listeQuartiers = Interaction.lireUnEntier(1, (joueurChoisi.nbQuartiersDansCite() + 1));
+
+                                    Quartier quartierChoisi = joueurChoisi.getCite()[listeQuartiers - 1];
+
+                                    if (this.getJoueur().nbPieces() < (quartierChoisi.getCout() - 1)) {
+                                        System.out.println("Votre trésor n’est pas suffisant");
+                                    } else {
+                                        choixDuQuartier = true;
+                                        System.out.println(joueurChoisi.nbQuartiersDansCite());
+                                        joueurChoisi.retirerQuartierDansCite(quartierChoisi.getNom());
+                                        System.out.println("Vous avez démoli " + quartierChoisi.getNom() + " de la cité de " + joueurChoisi.getNom());
+                                    }
                                 }
+                            } while (!choixDuQuartier);
 
-
-                            } while (choixDuQuartier == false);
                         }
                     }
                 } while (choixDuJoueur == false);

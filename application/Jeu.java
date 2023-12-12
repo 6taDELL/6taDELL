@@ -228,7 +228,6 @@ public class Jeu {
                                 this.plateauDeJeu.getPersonnage(personnage).utiliserPouvoir();
                             else
                                 this.plateauDeJeu.getPersonnage(personnage).utiliserPouvoirAvatar();
-                                System.out.println("\n\tLe " + this.plateauDeJeu.getPersonnage(personnage).getNom() + " utilise son pouvoir !\n");
                         }
                         System.out.println("\n\tVoulez vous construire ? (oui/non)");
                         if (!this.plateauDeJeu.getPersonnage(personnage).getJoueur().isSimule())
