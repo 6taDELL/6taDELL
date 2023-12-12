@@ -196,6 +196,50 @@ public class Configuration {
 
         plateau.setPioche(pioche);
 
+        switch(Jeu.nbJoueurs){
+
+            case 2:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 4:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 5:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 6:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+            case 7:
+                plateau.ajouterJoueur(new Joueur("ORDI 1"));
+                plateau.ajouterJoueur(new Joueur("ORDI 2"));
+                plateau.ajouterJoueur(new Joueur("ORDI 3"));
+                plateau.ajouterJoueur(new Joueur("ORDI 4"));
+                plateau.ajouterJoueur(new Joueur("ORDI 5"));
+                plateau.ajouterJoueur(new Joueur("ORDI 6"));
+                plateau.ajouterJoueur(new Joueur("Joueur"));
+                break;
+
+
+        }
+
         return plateau;
     }
     public static PlateauDeJeu configurationAristocrateAmbitieux(Pioche pioche){
