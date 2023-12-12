@@ -5,6 +5,7 @@ import java.util.Random;
 import controleur.Interaction;
 import modele.Joueur;
 import modele.Personnage;
+import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
 
@@ -52,6 +53,9 @@ public class Jeu {
     }
 
     private void initialisation() {
+        //or des taxes
+
+        orDesTaxes = 0;
         //implémentation nombre de Joueurs
         nbPersonnages = 8;
         nbJoueurs = 0;
@@ -75,28 +79,53 @@ public class Jeu {
             System.out.println("Vous voulez une partie de combien de personnages ?\n");
             nbPersonnages = Interaction.lireUnEntier(8, 9);
         }
+
+        String[] configuration = {"configuration de base", "Aristocrate ambitieux", "Intrigants Subtils", "Emissaires Illustres", "Dignitaires Sournois", "Oligarques Tenaces", "Nobles Retors"};
         
-        //or des taxes
-
-        orDesTaxes = 0;
-
-        //Initialisation du plateau de jeu
-        this.plateauDeJeu = Configuration.configurationEmissairesIllustres(Configuration.nouvellePioche());
-        //On ajoute 2 pièces au trésor de tous les joueurs
-        for (int i = 0; i < this.plateauDeJeu.getNombreJoueurs(); i++) {
-            Joueur joueur = this.plateauDeJeu.getJoueur(i);
-            joueur.ajouterPieces(2);
-            //On ajoute 4 quartiers au trésor de tous les joueurs
-            for (int j = 0; j < 4; j++) {
-                joueur.ajouterQuartierDansMain(this.plateauDeJeu.getPioche().piocher());
+        //implémentation différentes configurations
+        int configurationAChoisir = 0;
+        Pioche pioche;
+        int couronne;
+        do {
+            System.out.println("Veuillez choisir votre configuration de jeu : \n");
+            for(int i = 0; i<configuration.length; i++){
+                System.out.println((i+1) + ". " + configuration[i]);
             }
-            //On attribut à chaque joueur s'il est simulé ou pas
-            if (joueur.getNom().contains("bot")) {
-                joueur.setSimule(true);
+
+            
+            configurationAChoisir = Interaction.lireUnEntier(1, configuration.length);
+            configurationAChoisir--;
+
+            couronne = generateur.nextInt(nbJoueurs);
+            pioche = Configuration.nouvellePioche();
+            if(configurationAChoisir==0 && nbPersonnages==9){
+                System.out.println("Vous ne pouvez pas choisir la configuration de base avec 9 personnages.");
             }
+        } while (configurationAChoisir==0 && nbPersonnages==9);
+        
+        switch(configurationAChoisir){
+            case 0:
+                this.plateauDeJeu = Configuration.configurationDeBase(pioche);
+                break;
+            case 1:
+                this.plateauDeJeu = Configuration.configurationAristocrateAmbitieux(pioche);
+                break;
+            case 2:
+                this.plateauDeJeu = Configuration.configurationIntrigantsSubtils(pioche);
+                break;
+            case 3:
+                this.plateauDeJeu = Configuration.configurationEmissairesIllustres(pioche);
+                break;
+            case 4:
+                this.plateauDeJeu = Configuration.configurationDignitairesSournois(pioche);
+                break;
+            case 5:
+                this.plateauDeJeu = Configuration.configurationOligarquesTenaces(pioche);
+                break;
+            case 6:
+                this.plateauDeJeu = Configuration.configurationNoblesRetors(pioche);
+                break;
         }
-        //On attribut aléatoirement la couronne à un joueur
-        this.plateauDeJeu.getJoueur(this.generateur.nextInt(this.plateauDeJeu.getNombreJoueurs())).setPossedeCouronne(true);
     }
 
     private void gestionCouronne() {
@@ -199,6 +228,7 @@ public class Jeu {
                                 this.plateauDeJeu.getPersonnage(personnage).utiliserPouvoir();
                             else
                                 this.plateauDeJeu.getPersonnage(personnage).utiliserPouvoirAvatar();
+                                System.out.println("\n\tLe " + this.plateauDeJeu.getPersonnage(personnage).getNom() + " utilise son pouvoir !\n");
                         }
                         System.out.println("\n\tVoulez vous construire ? (oui/non)");
                         if (!this.plateauDeJeu.getPersonnage(personnage).getJoueur().isSimule())

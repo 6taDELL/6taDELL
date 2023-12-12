@@ -93,14 +93,33 @@ public class Configuration {
     
 
     //Déclaration des Personnages
-    private static Personnage assassin = new Assassin();
+    private static Personnage abbe = new Abbe();
+    private static Personnage alchimiste = new Alchimiste();
     private static Personnage architecte = new Architecte();
+    private static Personnage archiviste = new Archiviste();
+    private static Personnage artiste = new Artiste();
+    private static Personnage assassin = new Assassin();
+    private static Personnage bailli = new Bailli();
+    private static Personnage capitaine = new Capitaine();
+    private static Personnage cardinal = new Cardinal();
     private static Personnage condotierre = new Condottiere();
+    private static Personnage diplomate = new Diplomate();
+    private static Personnage echevin = new Echevin();
+    private static Personnage empereur = new Empereur();
+    private static Personnage espion = new Espion();
     private static Personnage eveque = new Eveque();
     private static Personnage magicienne = new Magicienne();
+    private static Personnage maitre_chanteuse = new Maitre_Chanteuse();
     private static Personnage marchande = new Marchande();
+    private static Personnage navigatrice = new Navigatrice();
+    private static Personnage negociant = new Negociant();
+    private static Personnage patricien = new Patricien();
+    private static Personnage reine = new Reine();
     private static Personnage roi = new Roi();
+    private static Personnage sorcier = new Sorcier();
+    private static Personnage sorciere = new Sorciere();
     private static Personnage voleur = new Voleur();
+    private static Personnage voyante = new Voyante();
 
     private int nbJoueur = 0;
     //Déclaration des Joueurs
@@ -179,7 +198,78 @@ public class Configuration {
 
         return plateau;
     }
-     public static PlateauDeJeu configurationEmissairesIllustres(Pioche pioche){ //fonctionnel
+    public static PlateauDeJeu configurationAristocrateAmbitieux(Pioche pioche){
+        PlateauDeJeu plateau = new PlateauDeJeu();
+        //fonctionnel
+        pioche.ajouter(capitole);
+        pioche.ajouter(carriere);
+        pioche.ajouter(chantier);
+        pioche.ajouter(courDesMiracles);
+        pioche.ajouter(donjon);
+        pioche.ajouter(ecoleDeMagie);
+        pioche.ajouter(ecuries);
+        pioche.ajouter(grandeMuraille);
+        pioche.ajouter(hospice);
+        pioche.ajouter(manufacture);
+        pioche.ajouter(necropole);
+        pioche.ajouter(parc);
+        pioche.ajouter(statueEquestre);
+        pioche.ajouter(tripot);
+
+        plateau.ajouterPersonnage(echevin);
+        plateau.ajouterPersonnage(voleur);
+        plateau.ajouterPersonnage(sorcier);
+        plateau.ajouterPersonnage(patricien);
+        plateau.ajouterPersonnage(eveque);
+        plateau.ajouterPersonnage(negociant);
+        plateau.ajouterPersonnage(architecte);
+        plateau.ajouterPersonnage(capitaine);
+        plateau.ajouterPersonnage(reine);
+        
+        pioche.melanger();
+
+        plateau.setPioche(pioche);
+
+        return plateau;
+
+    }
+    public static PlateauDeJeu configurationIntrigantsSubtils(Pioche pioche){
+        PlateauDeJeu plateau = new PlateauDeJeu();
+        //fonctionnel
+        pioche.ajouter(basilique);
+        pioche.ajouter(carriere);
+        pioche.ajouter(catacombes);
+        pioche.ajouter(donjon);
+        pioche.ajouter(dracoport);
+        pioche.ajouter(forge);
+        pioche.ajouter(hospice);
+        pioche.ajouter(mineDOr);
+        pioche.ajouter(monument);
+        pioche.ajouter(musee);
+        pioche.ajouter(necropole);
+        pioche.ajouter(parc);
+        pioche.ajouter(poudriere);
+        pioche.ajouter(theatre);
+
+        plateau.ajouterPersonnage(sorciere);
+        plateau.ajouterPersonnage(maitre_chanteuse);
+        plateau.ajouterPersonnage(magicienne);
+        plateau.ajouterPersonnage(empereur);
+        plateau.ajouterPersonnage(abbe);
+        plateau.ajouterPersonnage(alchimiste);
+        plateau.ajouterPersonnage(architecte);
+        plateau.ajouterPersonnage(condotierre);
+        plateau.ajouterPersonnage(reine);
+        
+        pioche.melanger();
+
+        plateau.setPioche(pioche);
+
+        return plateau;
+        
+    }
+    
+    public static PlateauDeJeu configurationEmissairesIllustres(Pioche pioche){ //fonctionnel
         PlateauDeJeu plateau = new PlateauDeJeu();
         //Pioche 
 
@@ -206,15 +296,15 @@ public class Configuration {
         
         //Persos
 
-        plateau.ajouterPersonnage(new Sorciere());
-        plateau.ajouterPersonnage(new Espion());
-        plateau.ajouterPersonnage(new Voyante());
-        plateau.ajouterPersonnage(new Empereur());
-        plateau.ajouterPersonnage(new Eveque());
-        plateau.ajouterPersonnage(new Marchande());
-        plateau.ajouterPersonnage(new Archiviste());
-        plateau.ajouterPersonnage(new Diplomate());
-        plateau.ajouterPersonnage(new Artiste());
+        plateau.ajouterPersonnage(sorciere);
+        plateau.ajouterPersonnage(espion);
+        plateau.ajouterPersonnage(voyante);
+        plateau.ajouterPersonnage(empereur);
+        plateau.ajouterPersonnage(eveque);
+        plateau.ajouterPersonnage(marchande);
+        plateau.ajouterPersonnage(archiviste);
+        plateau.ajouterPersonnage(diplomate);
+        plateau.ajouterPersonnage(artiste);
     
 
         pioche.melanger();
@@ -222,4 +312,119 @@ public class Configuration {
 
         return plateau;
         }
+
+    public static PlateauDeJeu configurationDignitairesSournois(Pioche pioche){
+        PlateauDeJeu plateau = new PlateauDeJeu();
+        //Pioche 
+
+      
+        pioche.ajouter(catacombes);
+        pioche.ajouter(chantier);
+        pioche.ajouter(courDesMiracles);
+        pioche.ajouter(dracoport);
+        pioche.ajouter(ecuries);
+        pioche.ajouter(fontaineAuxSouhaits);
+        pioche.ajouter(forge);
+        pioche.ajouter(laboratoire);
+        pioche.ajouter(hospice);
+        pioche.ajouter(manufacture);
+        pioche.ajouter(necropole);
+        pioche.ajouter(theatre);
+        pioche.ajouter(parc);
+        pioche.ajouter(tripot);
+        
+        //Ajout des Joueurs au plateau de jeu
+        
+        
+        
+        
+        //Persos
+
+        plateau.ajouterPersonnage(echevin);
+        plateau.ajouterPersonnage(maitre_chanteuse);
+        plateau.ajouterPersonnage(sorcier);
+        plateau.ajouterPersonnage(roi);
+        plateau.ajouterPersonnage(abbe);
+        plateau.ajouterPersonnage(alchimiste);
+        plateau.ajouterPersonnage(navigatrice);
+        plateau.ajouterPersonnage(capitaine);
+        plateau.ajouterPersonnage(reine);
+    
+
+        pioche.melanger();
+        plateau.setPioche(pioche);
+
+        return plateau;
+    }
+    
+    public static PlateauDeJeu configurationOligarquesTenaces(Pioche pioche){
+        PlateauDeJeu plateau = new PlateauDeJeu();
+        //Ajout des Personnages au plateau de jeu
+        plateau.ajouterPersonnage(assassin);
+        plateau.ajouterPersonnage(espion);
+        plateau.ajouterPersonnage(voyante);
+        plateau.ajouterPersonnage(roi);
+        plateau.ajouterPersonnage(cardinal);
+        plateau.ajouterPersonnage(negociant);
+        plateau.ajouterPersonnage(archiviste);
+        plateau.ajouterPersonnage(diplomate);
+        plateau.ajouterPersonnage(artiste);
+        //Ajout des Joueurs au plateau de jeu
+        
+
+        //Ajout des Merveilles à la pioche
+        pioche.ajouter(fontaineAuxSouhaits);
+        pioche.ajouter(forge);
+        pioche.ajouter(laboratoire);
+        pioche.ajouter(observatoire);
+        pioche.ajouter(salleDesCartes);
+        pioche.ajouter(statueEquestre);
+        pioche.ajouter(tresorImperial);
+        
+
+        pioche.melanger();
+
+        plateau.setPioche(pioche);
+
+        return plateau;
+    }
+    
+    public static PlateauDeJeu configurationNoblesRetors(Pioche pioche){
+        PlateauDeJeu plateau = new PlateauDeJeu();
+        //Ajout des Personnages au plateau de jeu
+        plateau.ajouterPersonnage(assassin);
+        plateau.ajouterPersonnage(voleur);
+        plateau.ajouterPersonnage(magicienne);
+        plateau.ajouterPersonnage(patricien);
+        plateau.ajouterPersonnage(cardinal);
+        plateau.ajouterPersonnage(marchande);
+        plateau.ajouterPersonnage(navigatrice);
+        plateau.ajouterPersonnage(condotierre);
+        plateau.ajouterPersonnage(bailli);
+        //Ajout des Joueurs au plateau de jeu
+        
+
+        //Ajout des Merveilles à la pioche
+        pioche.ajouter(basilique);
+        pioche.ajouter(dracoport);
+        pioche.ajouter(ecoleDeMagie);
+        pioche.ajouter(fontaineAuxSouhaits);
+        pioche.ajouter(laboratoire);
+        pioche.ajouter(mineDOr);
+        pioche.ajouter(monument);
+        pioche.ajouter(musee);
+        pioche.ajouter(poudriere);
+        pioche.ajouter(salleDesCartes);
+        pioche.ajouter(statueEquestre);
+        pioche.ajouter(tourDIvoire);
+        pioche.ajouter(tresorImperial);
+        pioche.ajouter(tripot);
+
+        pioche.melanger();
+
+        plateau.setPioche(pioche);
+
+        return plateau;
+    }
+
 }
