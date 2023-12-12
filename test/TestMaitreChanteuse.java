@@ -1,7 +1,7 @@
 package test;
 
 import modele.Caracteristiques;
-import modele.personnage.Maitre_Chanteuse;
+import modele.Maitre_Chanteuse;
 
 public class TestMaitreChanteuse {
 

@@ -6,9 +6,9 @@ import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Assassin;
-import modele.personnage.Magicienne;
-import modele.personnage.Sorcier;
+import modele.Assassin;
+import modele.Magicienne;
+import modele.Sorcier;
 
 public class TestSorcier {
 

@@ -4,7 +4,7 @@ import modele.Caracteristiques;
 import modele.Joueur;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Artiste;
+import modele.Artiste;
 
 public class TestArtiste {
 

@@ -1,9 +1,9 @@
 package test;
 
-import modele.personnage.Assassin;
-import modele.personnage.Condottiere;
-import modele.personnage.Roi;
-import modele.personnage.Voleur;
+import modele.Assassin;
+import modele.Condottiere;
+import modele.Roi;
+import modele.Voleur;
 
 import modele.Joueur;
 import modele.Pioche;

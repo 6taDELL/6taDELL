@@ -3,8 +3,8 @@ package test;
 import modele.Caracteristiques;
 import modele.Joueur;
 import modele.PlateauDeJeu;
-import modele.personnage.Architecte;
-import modele.personnage.Sorciere;
+import modele.Architecte;
+import modele.Sorciere;
 
 public class TestSorciere {
 

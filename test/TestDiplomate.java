@@ -5,9 +5,9 @@ import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Assassin;
-import modele.personnage.Diplomate;
-import modele.personnage.Roi;
+import modele.Assassin;
+import modele.Diplomate;
+import modele.Roi;
 
 public class TestDiplomate {
 

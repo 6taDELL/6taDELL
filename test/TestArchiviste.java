@@ -5,7 +5,7 @@ import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Archiviste;
+import modele.Archiviste;
 
 public class TestArchiviste {
 

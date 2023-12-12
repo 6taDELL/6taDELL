@@ -5,7 +5,7 @@ import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Navigatrice;
+import modele.Navigatrice;
 
 public class TestNavigatrice {
 

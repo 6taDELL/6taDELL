@@ -1,7 +1,7 @@
 package test;
 
 import modele.Caracteristiques;
-import modele.personnage.Echevin;
+import modele.Echevin;
 
 public class TestEchevin {
 

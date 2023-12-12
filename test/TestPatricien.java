@@ -3,7 +3,7 @@ package test;
 import modele.Caracteristiques;
 import modele.Joueur;
 import modele.Quartier;
-import modele.personnage.Patricien;
+import modele.Patricien;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 

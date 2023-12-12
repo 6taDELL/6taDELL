@@ -3,7 +3,7 @@ package test;
 import modele.Caracteristiques;
 import modele.Joueur;
 import modele.Quartier;
-import modele.personnage.Roi;
+import modele.Roi;
 
 public class TestRoi {
 

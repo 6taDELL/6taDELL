@@ -2,7 +2,7 @@ package test;
 
 import modele.Joueur;
 import modele.PlateauDeJeu;
-import modele.personnage.Roi;
+import modele.Roi;
 
 public class TestPlateauDeJeu {
 

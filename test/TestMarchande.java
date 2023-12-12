@@ -1,6 +1,6 @@
 package test;
 
-import modele.personnage.Marchande;
+import modele.Marchande;
 import modele.Caracteristiques;
 import modele.Joueur;
 import modele.Quartier;

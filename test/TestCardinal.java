@@ -6,9 +6,9 @@ import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Assassin;
-import modele.personnage.Cardinal;
-import modele.personnage.Roi;
+import modele.Assassin;
+import modele.Cardinal;
+import modele.Roi;
 
 
 public class TestCardinal {

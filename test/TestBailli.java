@@ -1,7 +1,7 @@
 package test;
 
 import modele.Caracteristiques;
-import modele.personnage.Bailli;
+import modele.Bailli;
 
 public class TestBailli {
 

@@ -5,8 +5,8 @@ import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
-import modele.personnage.Assassin;
-import modele.personnage.Espion;
+import modele.Assassin;
+import modele.Espion;
 
 public class TestEspion {
 

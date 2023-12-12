@@ -1,7 +1,7 @@
 package test;
 
 import modele.Caracteristiques;
-import modele.personnage.Architecte;
+import modele.Architecte;
 import modele.Joueur;
 import modele.Pioche;
 import modele.PlateauDeJeu;
