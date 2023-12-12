@@ -2,7 +2,7 @@ package modele.personnage;
 
 import java.util.Random;
 
-import application.Jeu;
+import application.Jeu.orDesTaxes;
 import controleur.Interaction;
 import modele.Caracteristiques;
 import modele.Personnage;
