@@ -7,59 +7,65 @@ public class PlateauDeJeu {
     private int nombrePersonnages;
     private int nombreJoueurs;
 
-    public PlateauDeJeu() { //Constructeur
-        this.listePersonnages = new Personnage[9];
-        this.listeJoueurs = new Joueur[9];
-        this.nombreJoueurs = 0;
-        this.nombrePersonnages = 0;
-        this.pioche = new Pioche();
+    public PlateauDeJeu(){
+        listePersonnages = new Personnage[9];
+        listeJoueurs= new Joueur[9];
+        nombreJoueurs = 0;
+        nombrePersonnages = 0;
+        pioche = new Pioche();
     }
 
-    public int getNombrePersonnages() { //Retourne le nombre de personnages sur le plateau
-        return this.nombrePersonnages;
+    public int getNombrePersonnages(){
+        return nombrePersonnages;
     }
 
-    public int getNombreJoueurs() { //Retourne le nombre de joueurs sur le plateau
-        return this.nombreJoueurs;
+    public int getNombreJoueurs(){
+        return nombreJoueurs;
     }
 
-    public Pioche getPioche() { //Retourne la pioche 
-        return this.pioche;
+    public Pioche getPioche(){
+        return pioche;
     }
 
-    public void setPioche(Pioche pioche){
-        this.pioche = pioche;
+    public void setPioche(Pioche p){
+        this.pioche = p;
     }
 
-    public Personnage getPersonnage(int i) { //Retourne un personnage parmis la liste des personnages
-        if (0 <= i && i <= 8) {
+    public Personnage getPersonnage(int i){
+        if(i >= 0 && i <= (nombrePersonnages - 1)) {
             return listePersonnages[i];
-        } else {
+        }else{
             return null;
         }
     }
 
-    public Joueur getJoueur(int i) { //Retourne un personnage parmis la liste des joueurs
-        if (0 <= i && i <= 8) {
+    public Joueur getJoueur(int i){
+        if(i >= 0 && i <= (nombreJoueurs - 1)) {
             return listeJoueurs[i];
-        } else {
+        }else{
             return null;
         }
     }
 
-    public void ajouterPersonnage(Personnage personnage) { //Ajouter un nouveau personnage dans le plateau de jeu
-        if (personnage != null && this.getNombrePersonnages() != this.listePersonnages.length) {
-            this.listePersonnages[this.getNombrePersonnages()] = personnage;
+    public void ajouterPersonnage(Personnage personnage){
+        if(nombrePersonnages < 9 && personnage != null){
+            listePersonnages[nombrePersonnages] = personnage;
             personnage.setPlateau(this);
-            this.nombrePersonnages += 1;
+            nombrePersonnages += 1;
+        }else{
+            System.out.println("le nombre de personnage est déjà de 9 ou la valeur renseignée en paramètre est nulle");
         }
     }
 
-    public void ajouterJoueur(Joueur joueur) { //Ajouter un nouveau joueur dans le plateau de jeu
-        if (joueur != null && this.getNombreJoueurs() != this.listeJoueurs.length) {
-            this.listeJoueurs[this.getNombreJoueurs()] = joueur;
-            this.nombreJoueurs += 1;
+    public void ajouterJoueur(Joueur joueur){
+        if(nombreJoueurs < 9 && joueur != null){
+            listeJoueurs[nombreJoueurs] = joueur;
+            nombreJoueurs += 1;
+        }else{
+            System.out.println("le nombre de joueur est déjà de 9 ou la valeur renseignée en paramètre est nulle");
         }
     }
+
+
 
 }

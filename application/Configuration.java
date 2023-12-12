@@ -102,7 +102,7 @@ public class Configuration {
     private static Personnage bailli = new Bailli();
     private static Personnage capitaine = new Capitaine();
     private static Personnage cardinal = new Cardinal();
-    private static Personnage condotierre = new Condottiere();
+    private static Personnage condottiere  = new Condottiere();
     private static Personnage diplomate = new Diplomate();
     private static Personnage echevin = new Echevin();
     private static Personnage empereur = new Empereur();
@@ -167,7 +167,7 @@ public class Configuration {
         //Ajout des Personnages au plateau de jeu
         plateau.ajouterPersonnage(architecte);
         plateau.ajouterPersonnage(assassin);
-        plateau.ajouterPersonnage(condotierre);
+        plateau.ajouterPersonnage(condottiere);
         plateau.ajouterPersonnage(eveque);
         plateau.ajouterPersonnage(magicienne);
         plateau.ajouterPersonnage(marchande);
@@ -373,7 +373,7 @@ public class Configuration {
         plateau.ajouterPersonnage(abbe);
         plateau.ajouterPersonnage(alchimiste);
         plateau.ajouterPersonnage(architecte);
-        plateau.ajouterPersonnage(condotierre);
+        plateau.ajouterPersonnage(condottiere);
         if(Jeu.nbPersonnages ==9){
             plateau.ajouterPersonnage(bailli);
     
@@ -772,7 +772,7 @@ public class Configuration {
         plateau.ajouterPersonnage(cardinal);
         plateau.ajouterPersonnage(marchande);
         plateau.ajouterPersonnage(navigatrice);
-        plateau.ajouterPersonnage(condotierre);
+        plateau.ajouterPersonnage(condottiere);
         if(Jeu.nbPersonnages ==9){
             plateau.ajouterPersonnage(bailli);
         }
