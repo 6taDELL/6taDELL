@@ -1,18 +1,37 @@
 package application;
 
+import modele.Abbe;
+import modele.Alchimiste;
 import modele.Architecte;
+import modele.Archiviste;
+import modele.Artiste;
 import modele.Assassin;
+import modele.Bailli;
+import modele.Capitaine;
+import modele.Cardinal;
 import modele.Condottiere;
+import modele.Diplomate;
+import modele.Echevin;
+import modele.Empereur;
+import modele.Espion;
 import modele.Eveque;
 import modele.Joueur;
 import modele.Magicienne;
+import modele.Maitre_Chanteuse;
 import modele.Marchande;
+import modele.Navigatrice;
+import modele.Negociant;
+import modele.Patricien;
 import modele.Personnage;
 import modele.Pioche;
 import modele.PlateauDeJeu;
 import modele.Quartier;
+import modele.Reine;
 import modele.Roi;
+import modele.Sorcier;
+import modele.Sorciere;
 import modele.Voleur;
+import modele.Voyante;
 
 public class Configuration {
     //Déclaration des Quartiers
