@@ -17,7 +17,7 @@ Nous sommes un groupe de 4 élèves au sein de l'Esaip:
 
 ---
 
-We are a team with 4 students comming fro ESAIP :
+We are a team with 4 students comming from ESAIP :
 
 - ANQUETIL Eloi
 - BRUN-PICARD Matéo

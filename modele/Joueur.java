@@ -13,6 +13,7 @@ public class Joueur {
 	private boolean simule;
 	private boolean premier;
 	private boolean rangPlusEleve;
+    private boolean possedeEcoleMagie;
 
     public Joueur(String nom) { //Constructeur
         this.nom = nom;
@@ -24,6 +25,7 @@ public class Joueur {
 		this.simule = false;
 	    this.premier = false;
 	    this.rangPlusEleve = false;
+        this.possedeEcoleMagie = false;
     }
 
     public Personnage getPersonnage() { //Retourne le personnage choisi par le joueur
@@ -150,13 +152,27 @@ public class Joueur {
         return retour;
     }
 
+        public Quartier retirerQuartierDansMain(Quartier quartier){
+        if(main.size() == 0){
+            return null;
+        }else{ 
+            main.remove(quartier);
+            return quartier;
+        }
+    }
+
     public void reinitialiser() { //Reinitialiser les données du joueur 
         this.tresor = 0;
         this.main = new ArrayList < Quartier > ();
         this.cite = new Quartier[8];
         this.nbQuartiers = 0;
     }
+
+    public void setPossedeEcoleMagie(boolean bool){
+        this.possedeEcoleMagie = bool;
+    }
+
+    public boolean getPossedeEcoleMagie(){
+        return this.possedeEcoleMagie;
+    }
 }
-
-
-	

@@ -8,6 +8,11 @@ public abstract class Personnage {
     protected boolean assassine;
     protected boolean vole;
     protected PlateauDeJeu plateau;
+    protected boolean ensorcele;
+    protected boolean vraiEchevin;
+    protected boolean fauxEchevin;
+    protected boolean vraieMenace;
+    protected boolean fausseMenace;
 
     public Personnage(String nom, int rang, String caracteristiques) { //Constructeur
         this.nom = nom;
@@ -16,6 +21,11 @@ public abstract class Personnage {
         joueur = null;
         assassine = false;
         vole = false;
+        this.ensorcele = false;
+        this.vraiEchevin = false;
+        this.fauxEchevin = false;
+        this.vraieMenace = false;
+        this.fausseMenace = false;
     }
 
     public String getNom() { //Retourne le nom du personnage
@@ -100,4 +110,44 @@ public abstract class Personnage {
     }
 
     public abstract void utiliserPouvoirAvatar(); //Utilisation du pouvoir spécifique d'un personnage aléatoirement
+
+    public void setEnsorcele(boolean ensorcele) {
+        this.ensorcele = ensorcele;
+    }
+
+    public boolean getEnsorcele(){
+        return ensorcele;
+    }
+
+    public void setVraiEchevin(boolean bool) {
+        this.vraiEchevin = bool;
+    }
+
+    public boolean getVraiEchevin() {
+        return this.vraiEchevin;
+    }
+
+    public void setFauxEchevin(boolean bool) {
+        this.fauxEchevin = bool;
+    }
+
+    public boolean getFauxEchevin() {
+        return this.fauxEchevin;
+    }
+
+    public void setFausseMenace(boolean bool) {
+        this.fausseMenace = bool;
+    }
+
+    public boolean getFausseMenace() {
+        return this.fausseMenace;
+    }
+    public void setVraieMenace(boolean bool) {
+        this.vraieMenace = bool;
+    }
+
+    public boolean getVraieMenace() {
+        return this.vraieMenace;
+    }
+
 }

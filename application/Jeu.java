@@ -13,6 +13,7 @@ public class Jeu {
     private int joueurPersoRangMax = 0;
     private PlateauDeJeu plateauDeJeu;
     private Random generateur;
+    private static int orDesTaxes;
 
     public Jeu() {
         this.plateauDeJeu = new PlateauDeJeu();
@@ -49,6 +50,10 @@ public class Jeu {
     }
 
     private void initialisation() {
+        //or des taxes
+
+        orDesTaxes = 0;
+
         //Initialisation du plateau de jeu
         this.plateauDeJeu = Configuration.configurationDeBase(Configuration.nouvellePioche());
         //On ajoute 2 pièces au trésor de tous les joueurs
