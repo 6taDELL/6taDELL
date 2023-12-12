@@ -55,7 +55,7 @@ public class Jeu {
         orDesTaxes = 0;
 
         //Initialisation du plateau de jeu
-        this.plateauDeJeu = Configuration.configurationDeBase(Configuration.nouvellePioche());
+        this.plateauDeJeu = Configuration.configurationEmissairesIllustres(Configuration.nouvellePioche());
         //On ajoute 2 pièces au trésor de tous les joueurs
         for (int i = 0; i < this.plateauDeJeu.getNombreJoueurs(); i++) {
             Joueur joueur = this.plateauDeJeu.getJoueur(i);

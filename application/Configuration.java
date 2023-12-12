@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+
 import modele.Abbe;
 import modele.Alchimiste;
 import modele.Architecte;
@@ -180,4 +182,50 @@ public class Configuration {
 
         return plateau;
     }
+     public static PlateauDeJeu configurationEmissairesIllustres(Pioche pioche){ //fonctionnel
+        PlateauDeJeu plateau = new PlateauDeJeu();
+        //Pioche 
+
+      
+        pioche.ajouter(bibliotheque);
+        pioche.ajouter(carriere);
+        pioche.ajouter(chantier);
+        pioche.ajouter(courDesMiracles);
+        pioche.ajouter(donjon);
+        pioche.ajouter(ecoleDeMagie);
+        pioche.ajouter(forge);
+        pioche.ajouter(grandeMuraille);
+        pioche.ajouter(hospice);
+        pioche.ajouter(manufacture);
+        pioche.ajouter(musee);
+        pioche.ajouter(observatoire);
+        pioche.ajouter(parc);
+        pioche.ajouter(tourDIvoire);
+        
+        //Ajout des Joueurs au plateau de jeu
+        plateau.ajouterJoueur(j1);
+        plateau.ajouterJoueur(j2);
+        plateau.ajouterJoueur(j3);
+        plateau.ajouterJoueur(j4);
+        
+        
+        
+        //Persos
+
+        plateau.ajouterPersonnage(new Sorciere());
+        plateau.ajouterPersonnage(new Espion());
+        plateau.ajouterPersonnage(new Voyante());
+        plateau.ajouterPersonnage(new Empereur());
+        plateau.ajouterPersonnage(new Eveque());
+        plateau.ajouterPersonnage(new Marchande());
+        plateau.ajouterPersonnage(new Archiviste());
+        plateau.ajouterPersonnage(new Diplomate());
+        plateau.ajouterPersonnage(new Artiste());
+    
+
+        pioche.melanger();
+        plateau.setPioche(pioche);
+
+        return plateau;
+        }
 }
