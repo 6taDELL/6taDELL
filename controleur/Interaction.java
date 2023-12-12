@@ -44,15 +44,30 @@ public class Interaction {
 
 	// lit les réponses "oui", "non", "o" ou "n" et renvoie un booléen
 	public static boolean lireOuiOuNon() {
-		boolean retour = true;
-		// ...
-		return retour;
+		String userInput;
+		boolean response;
+
+		do {
+			System.out.print("Veuillez répondre par 'oui' ou 'non' (o/n) : ");
+			userInput = sc.next().toLowerCase(); // Read user input and convert to lowercase
+
+			if (userInput.equals("oui") || userInput.equals("o")) {
+				response = true;
+			} else if (userInput.equals("non") || userInput.equals("n")) {
+				response = false;
+			} else {
+				System.out.println("Veuillez entrer une réponse valide.");
+				response = lireOuiOuNon(); // Recursive call until valid input is received
+			}
+		} while (!userInput.equals("oui") && !userInput.equals("non") && !userInput.equals("o") && !userInput.equals("n"));
+
+		return response;
 	}
 
 	// renvoie une chaîne de caractère lue au clavier:
 	public static String lireUneChaine() {
-		String retour = "";
-		//...
-		return retour;
+		System.out.print("Veuillez entrer une chaîne de caractères : ");
+		String input = sc.nextLine(); // Read a line of text entered by the user
+		return input;
 	}
 }
